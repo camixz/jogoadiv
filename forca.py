@@ -12,15 +12,15 @@ def jogar_forca():
 
     #Enquanto o jogador não se "enforcar" E não acertar a palavra, faça algo
     while(not enforcou and not acertou):
-        chute = input("Escolha uma letra!")
+         chute = input("Escolha uma letra!")
+
+        index = 0
+    
         for letra in palavraSecreta:
             if(chute == letra):
-                print(letra)
-                
-        print("Escolha outra letra!")
+                print("Encontrei a letra {} na posição {}".formar(letra, index))
+            index = index + 1 
+        print("jogando...")
 
 
     print("Fim de jogo!")
-
-if(__name__ == "__main__"):
-    jogar_forca()
